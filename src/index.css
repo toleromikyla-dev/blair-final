@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff8f5;
+  color: #333;
+  overflow-x: hidden;
+  font-family: Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.petal {
+  position: absolute;
+  top: -50px;
+  font-size: 24px;
+  opacity: 0.7;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+@keyframes float {
+
+  0%{
+      transform:translateY(0px);
+  }
+
+  50%{
+      transform:translateY(-15px);
+  }
+
+  100%{
+      transform:translateY(0px);
+  }
+
+}
+
+.animate-float{
+
+    animation:float 5s ease-in-out infinite;
+
+}

@@ -1,14 +1,46 @@
+import { useRef, useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Letter from "./components/Letter";
-import Footer from "./components/Footer";
 import Why from "./components/Why";
 import Admire from "./components/Admire";
 import Wondering from "./components/Wondering";
+import Letter from "./components/Letter";
 import Court from "./components/Court";
+import Footer from "./components/Footer";
+import Intro from "./components/Intro";
+
 function App() {
+  const [started, setStarted] = useState(false);
+
+  const audioRef = useRef(null);
+
+  const startWebsite = async () => {
+    try {
+      if (audioRef.current) {
+        await audioRef.current.play();
+      }
+    } catch (err) {
+      console.error("Audio failed to play:", err);
+    }
+
+    setStarted(true);
+  };
+
   return (
-    <div className="bg-[#fff8f5] min-h-screen">
+    <>
+      {/* Background Music */}
+      <audio
+        ref={audioRef}
+        src="/music/bawatdaan.mp3"
+        loop
+        preload="auto"
+      />
+
+      {/* Intro */}
+      {!started && <Intro onStart={startWebsite} />}
+
+      {/* Website */}
       <Navbar />
       <Hero />
       <Why />
@@ -17,7 +49,7 @@ function App() {
       <Letter />
       <Court />
       <Footer />
-    </div>
+    </>
   );
 }
 

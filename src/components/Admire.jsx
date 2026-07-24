@@ -1,182 +1,91 @@
 import Reveal from "./Reveal";
 
 export default function Admire() {
-
-  const cards = [
-    {
-      title: "Your Smile",
-      text: "I don't know if you notice it, but it's one of the first things that made me smile too."
-    },
-    {
-      title: "Your Kindness",
-      text: "The way you treat people says a lot about the kind of person you are."
-    },
-    {
-      title: "Your Strength",
-      text: "Even after everything you've been through, you still choose to be kind."
-    },
-    {
-      title: "Your Personality",
-      text: "Talking to you never feels forced. It just feels easy."
-    },
-    {
-      title: "Your Heart",
-      text: "You care more than you realize, and that's something I genuinely admire."
-    },
-    {
-      title: "Simply You",
-      text: "I don't think it's one specific thing. It's just you."
-    }
-  ];
-
-
   return (
     <section
       id="admire"
-      className="bg-[#fffaf9] py-32 px-6 relative overflow-hidden"
+      className="relative overflow-hidden bg-[#fffaf9] py-32 px-6"
     >
-
-      {/* Background Lily Accent */}
-      <div
-        className="
-          absolute
-          right-10
-          top-20
-          text-8xl
-          opacity-10
-        "
-      >
-        🌿
-      </div>
-
+      {/* Background Accent */}
+      <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-rose-100 blur-3xl opacity-40"></div>
+      <div className="absolute bottom-0 -left-20 w-72 h-72 rounded-full bg-pink-100 blur-3xl opacity-30"></div>
 
       <Reveal>
+        <div className="max-w-4xl mx-auto">
 
-        <div className="max-w-6xl mx-auto">
-
-
-          {/* Section Header */}
-          <div className="text-center mb-20">
-
-            <p
-              className="
-                uppercase
-                tracking-[5px]
-                text-rose-400
-                text-sm
-              "
-            >
-              THINGS I LIKE ABOUT YOU
+          {/* Header */}
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[5px] text-rose-400 text-sm">
+              WHAT I REALIZED
             </p>
 
-
-            <h2
-              className="
-                mt-5
-                text-5xl
-                md:text-6xl
-                font-light
-                text-gray-800
-                leading-tight
-              "
-            >
-              The little things
+            <h2 className="mt-5 text-5xl md:text-6xl font-light text-gray-800 leading-tight">
+              Sometimes,
               <br />
-              that made me notice you.
+              appreciation isn't
+              <br />
+              the same as compatibility.
             </h2>
-
           </div>
 
+          {/* Letter Card */}
+          <div className="bg-white rounded-[40px] border border-rose-100 shadow-xl p-8 md:p-14">
 
+            <div className="space-y-8 text-gray-600 text-lg leading-9">
 
-          {/* Cards */}
-          <div
-            className="
-              grid
-              md:grid-cols-2
-              lg:grid-cols-3
-              gap-8
-            "
-          >
+              <p>
+                I don't think this is the ending I imagined when I first decided
+                to get to know you, but I guess life has a way of teaching us
+                things we never expect.
+              </p>
 
-            {cards.map((card, index) => (
+              <p>
+                Sometimes, no matter how much you appreciate someone, you also
+                have to be honest enough to admit that not every connection is
+                meant to become something more.
+              </p>
 
-              <div
-                key={index}
-                className="
-                  group
-                  bg-white/70
-                  backdrop-blur-md
-                  border
-                  border-white
-                  rounded-3xl
-                  p-8
-                  shadow-sm
-                  transition
-                  duration-500
-                  hover:-translate-y-2
-                  hover:shadow-xl
-                "
-              >
+              <p>
+                I don't want to force something just because I genuinely like
+                you. I'd rather accept things for what they are than keep hoping
+                for something that may never feel right for either of us.
+              </p>
 
+              <p>
+                If there's one thing I want you to know, it's that meeting you
+                is something I'll never regret. You became someone I genuinely
+                appreciated, and that's something I'll always carry with me.
+              </p>
 
-                {/* Icon */}
-                <div
-                  className="
-                    w-12
-                    h-12
-                    rounded-full
-                    bg-rose-50
-                    flex
-                    items-center
-                    justify-center
-                    text-rose-400
-                    mb-8
-                  "
-                >
-                  🤍
-                </div>
+              <p>
+                Thank you for every conversation, every laugh, and every little
+                moment we shared. Even if they seemed ordinary at the time, they
+                meant more to me than you probably realized.
+              </p>
 
+              <p>
+                Thank you for allowing me to get to know you, even if it was
+                only for a little while. I truly appreciate that more than words
+                can explain.
+              </p>
 
+              <p>
+                I sincerely hope life treats you kindly, and I hope you find the
+                happiness, peace, and love you deserve.
+              </p>
 
-                {/* Title */}
-                <h3
-                  className="
-                    text-2xl
-                    font-light
-                    text-gray-800
-                    mb-4
-                  "
-                >
-                  {card.title}
-                </h3>
+              <p className="italic text-gray-500">
+                Some people come into our lives not to stay forever, but to
+                leave us with something worth remembering. Thank you for being
+                one of those people.
+              </p>
 
-
-
-                {/* Description */}
-                <p
-                  className="
-                    text-gray-600
-                    leading-8
-                  "
-                >
-                  {card.text}
-                </p>
-
-
-              </div>
-
-            ))}
-
+            </div>
 
           </div>
-
 
         </div>
-
       </Reveal>
-
-
     </section>
   );
 }
